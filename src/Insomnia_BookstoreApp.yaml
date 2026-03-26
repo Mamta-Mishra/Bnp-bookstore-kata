@@ -1,0 +1,380 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Bookstore
+meta:
+  id: wrk_0c553c24631f4dd199f9f5a23f86d5b6
+  created: 1774531273960
+  modified: 1774531273960
+  description: ""
+collection:
+  - url: http://localhost:8811/api/auth/register
+    name: create user
+    meta:
+      id: req_65c94cbb7b44481ca6ae3a665dec5462
+      created: 1774531287886
+      modified: 1774532784767
+      isPrivate: false
+      description: ""
+      sortKey: -1774531287886
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "JanJansen",
+          "password": "password1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/auth/login
+    name: login
+    meta:
+      id: req_4246091ec0474f66ad2bf019f70184f3
+      created: 1774533256872
+      modified: 1774540850852
+      isPrivate: false
+      description: ""
+      sortKey: -1769005553473
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "JanJansen",
+          "password": "password1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/books
+    name: getAllBooks
+    meta:
+      id: req_26e7c556402047d995d9bb2c50a54704
+      created: 1774533606105
+      modified: 1774540882240
+      isPrivate: false
+      description: ""
+      sortKey: -1774533606105
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/cart
+    name: getAllItemFromCart
+    meta:
+      id: req_9c7281181c374394a0590ec7fb9d30a1
+      created: 1774534624845
+      modified: 1774540889622
+      isPrivate: false
+      description: ""
+      sortKey: -1774534624845
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/books/12
+    name: getbookById
+    meta:
+      id: req_b6a08d1a6d1c487a8da02d3c512b2b2d
+      created: 1774535380165
+      modified: 1774540875993
+      isPrivate: false
+      description: ""
+      sortKey: -1774532446995.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/cart/8
+    name: updateItemQuantityInCart
+    meta:
+      id: req_c3704f93d85647d59b57aca424adf716
+      created: 1774536385983
+      modified: 1774540982089
+      isPrivate: false
+      description: ""
+      sortKey: -1774534115475
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "quantity": 3
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/cart
+    name: addItemToCart
+    meta:
+      id: req_33618f3919ce41d9ac3c2f430808cd07
+      created: 1774536737119
+      modified: 1774540917809
+      isPrivate: false
+      description: ""
+      sortKey: -1774534370160
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "bookId": 12,
+          "quantity": 2
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/cart/8
+    name: deleteItemfromCart
+    meta:
+      id: req_7d0afc7f3ad2460991b4ef8a5368d7a4
+      created: 1774537162060
+      modified: 1774541013701
+      isPrivate: false
+      description: ""
+      sortKey: -1774533860790
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/cart
+    name: clearCart
+    meta:
+      id: req_81b72b56aa254fc1b7f5ee9f995403ae
+      created: 1774537654389
+      modified: 1774537661351
+      isPrivate: false
+      description: ""
+      sortKey: -1774533733447.5
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1MzczNzYsImV4cCI6MTc3NDYyMzc3Nn0.oUlaJ0lk-_c0IlP9ehZbgsGYPG-ilDob2_J_5kGAhZQ
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/cart/checkout
+    name: checkout
+    meta:
+      id: req_cf68f03f06464714b9bbc1721da24c2e
+      created: 1774538077803
+      modified: 1774541031505
+      isPrivate: false
+      description: ""
+      sortKey: -1774533669776.25
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8811/api/orders
+    name: getOrders
+    meta:
+      id: req_3c733595619a43c3900e59994ac9baaa
+      created: 1774541056220
+      modified: 1774541098081
+      isPrivate: false
+      description: ""
+      sortKey: -1774533637940.625
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYW5KYW5zZW4iLCJpYXQiOjE3NzQ1NDA4NTEsImV4cCI6MTc3NDYyNzI1MX0.R75Oe5PjMvGp0XPaOkpHmcnhXT04qyyoLsVhOUC_K0k
+      prefix: Bearer
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5c753929771421251aa28a887cce20a1019584ff
+    created: 1774531273969
+    modified: 1774535618757
+  cookies:
+    - id: f3210a2f-3c5a-4be2-afca-20f22ba281e7
+      key: JSESSIONID
+      value: AD7594ACBF6697F992A7898F37E22930
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_5c753929771421251aa28a887cce20a1019584ff
+    created: 1774531273965
+    modified: 1774531273965
+    isPrivate: false
